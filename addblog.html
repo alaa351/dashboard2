@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/46.0.1/ckeditor5.css" />
+
+
+</head>
+
+<body>
+    <div class="min-wiper">
+          <nav>
+            <header class="header d-flex justify-content-between">
+                <div class="right d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="#">لوحة التحكم</a>
+                    </div>
+                    <a> <i class="fa-solid fa-chart-bar" id="sidbar-toog"></i></a>
+
+                    <form class=" d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="ابحث">
+                    </form>
+                </div>
+
+
+                <div class="left d-flex  d-flex align-items-center gap-3 px-2">
+                    <div class="icon">
+                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                            aria-controls="offcanvasScrolling">
+                            <i class="fa-regular fa-message bell"></i>
+                        </a>
+
+
+                        <a href="#"><i class="fa-regular fa-heart" data-bs-toggle="modal"
+                                data-bs-target="#favoritesModal"></i></a>
+                        <a href="#profileModal" data-bs-toggle="modal"><i class="fa-regular fa-user"></i></a>
+
+                    </div>
+                    <div class="afatar">
+                        <img src="images/per1.jpg">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active" data-bs-toggle="offcanvas"
+                        href="#offcanvasExample"></i>
+
+
+                </div>
+            </header>
+        </nav>
+
+        <div class="sidepar" id="sidepar">
+            <div class="profile ">
+                <img width="80px" src="images/per1.jpg">
+                <h3>الاء الجندي </h3>
+            </div>
+            <ul class="ul-slider">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house fs-4"></i>
+                    <a href="index.html">الرئيسية</a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-pills fs-4"></i>
+                    <a href="">المخزون (الادوية)</a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-cart-arrow-down fs-4"></i>
+                    <a href="">الطلبات </a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-shop fs-4"></i>
+                    <a href="">الصيدليات </a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-truck fs-4"></i>
+                    <a href="">الموردين </a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-users-gear fs-4"></i>
+                    <a href="">المستخدمين </a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-id-badge fs-4"></i>
+                    <a href="employee.html">كافة الموظفين </a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-bell fs-4"></i>
+                    <a href=""> التنبيهات </a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-gear fs-4"></i>
+                    <a href=""> الاعدادات </a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-chart-line fs-4"></i>
+                    <a href="blog.html"> التقارير </a>
+
+                </li>
+                <li class="mb-2">
+                    <i class="	fa-solid fa-right-from-bracket fs-4"></i>
+                    <a href=""> تسجيل الخروج </a>
+
+                </li>
+
+
+
+
+
+            </ul>
+        </div>
+
+
+
+
+        <div class="content" id="content">
+            <div class="inner">
+                <div class="container-fluid">
+                    <h4 class="mt-2"> اضافة تقرير جديد</h4>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-2">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>اسم المقال </label>
+                                            <input type="text" placeholder="اسم المقال " class="form-control mt-2 ">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label> رابط المقال </label>
+                                            <input type="text" placeholder=" رابط المقال  " class="form-control mt-2 ">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+                                            <label>التصنيف</label>
+                                            <select class="form-select mt-2 " aria-label="Default select example">
+                                                <option selected disabled>اختر التصنيف </option>
+                                                <option value="1">حبوب</option>
+                                                <option value="2">ابر</option>
+                                                <option value="3">سيرومات</option>
+                                                <option value="3">شراب</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label> التاغات </label>
+                                            <select class="js-example-basic-multiple  mt-2 form-select" name="states[]"
+                                                multiple="multiple">
+                                                <option value="AL">ادوية</option>
+                                                <option value="AL">صيدلية</option>
+                                                <option value="AL">علاج</option>
+                                                <option value="AL">فيتامينات</option>
+                                                <option value="AL">مضاد حيوي</option>
+                                                <option value="AL"> طب</option>
+
+
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">صورة المقال</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                         <div class="col-md-6">
+
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">صورة البنر</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <textarea class="form-control" id="editor"> </textarea>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+ <!--النشاط-->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">الصيدليات المتصلة</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="actimuni ">
+                    <div class="actimg position-relative">
+                        <div class="spinner-grow text-success spinner-sm ruser" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50px" src="images/far2 (1).jpg">
+                        <h5>صيدلية الياسمين</h5>
+                    </div>
+                    <div class="sochial">
+
+
+                        <i class="fa-brands fa-square-whatsapp wa"></i>
+                        <i class="fa-brands fa-facebook-messenger ma"></i>
+                    </div>
+                </div>
+                <div class="actimuni mt-2 ">
+                    <div class="actimg position-relative">
+                        <div class="spinner-grow text-success spinner-sm ruser" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50px" src="images/far2 (2).jpg">
+                        <h5>صيدلية القدس</h5>
+                    </div>
+                    <div class="sochial">
+
+
+                        <i class="fa-brands fa-square-whatsapp wa"></i>
+                        <i class="fa-brands fa-facebook-messenger ma"></i>
+                    </div>
+                </div>
+                <div class="actimuni mt-2 ">
+                    <div class="actimg position-relative">
+                        <div class="spinner-grow text-success spinner-sm ruser" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50px" src="images/far3.jpg">
+                        <h5>صيدلية فارما</h5>
+                    </div>
+                    <div class="sochial">
+
+
+                        <i class="fa-brands fa-square-whatsapp wa"></i>
+                        <i class="fa-brands fa-facebook-messenger ma"></i>
+                    </div>
+                </div>
+                <div class="actimuni mt-2 ">
+                    <div class="actimg position-relative">
+                        <div class="spinner-grow text-success spinner-sm ruser" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50px" src="images/far4.jpg">
+
+                        <h5>صيدلية سيتامول</h5>
+                    </div>
+                    <div class="sochial">
+
+
+                        <i class="fa-brands fa-square-whatsapp wa"></i>
+                        <i class="fa-brands fa-facebook-messenger ma"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<!-- مودال البروفايل -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="profileModalLabel">الملف الشخصي</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <img src="images/per1.jpg" class="rounded-circle mb-3" width="100" height="100" alt="Profile Picture">
+        <h5> الاء الجندي </h5>
+        <p class="text-muted">alaa@gmail.com</p>
+        
+        <div class="mt-3">
+          <p><strong>الهاتف:</strong> 09874536</p>
+          <p><strong>الدور:</strong> ادمن</p>
+        </div>
+      </div>
+
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+        
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edaitpro">تعديل</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+        <div class="modal fade" id="edaitpro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> تعديل بيانات البروفايل </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+
+                        <form>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label class="form-label">الاسم الكامل </label>
+                                    <input type="text" class="form-control" placeholder="ادخل الاسم الكامل ">
+
+                                </div>
+                                <div class="mb-3 col">
+                                    <label class="form-label"> الايميل </label>
+                                    <input type="email" class="form-control" placeholder="ادخل الايميل">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label class="form-label"> رقم الهاتف </label>
+                                    <input type="tel" class="form-control" placeholder=" ادخل رقم الهاتف ">
+
+
+                                </div>
+                                <div class="mb-3 col">
+                                    <label class="form-label">  الدور  </label>
+                                    <input type="text" class="form-control" placeholder="ادخل الدور  ">
+
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">صورة البروفايل</label>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary dash " data-bs-dismiss="modal">اغلاق</button>
+                        <button type="button" class="btn btn-primary dash">تعديل </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  <!--الاشعارات-->
+
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">التنبيهات</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <h6 class="mt-3">🔔 التنبيهات</h6>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-warning mb-2">دواء "Panadol" على وشك النفاد.</li>
+                    <li class="list-group-item list-group-item-danger mb-2">صلاحية "Aspirin" تنتهي خلال 7 أيام.</li>
+                    <li class="list-group-item list-group-item-info mb-2">طلب جديد من صيدلية الأمل.</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+
+        <!--المفضلة-->
+
+        <!-- Modal لعرض الأدوية المفضلة -->
+        <div class="modal fade" id="favoritesModal" tabindex="-1" aria-labelledby="favoritesModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="favoritesModalLabel">📦 الأدوية المفضلة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item zz">💊 باراسيتامول 500mg</li>
+                            <li class="list-group-item zz">💊 أوغمنتين 1g</li>
+                            <li class="list-group-item zz">💊 بروفين 400mg</li>
+                            <!-- ضيفي أو عدّلي حسب الحاجة -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="js/datatables.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="js/chars.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script>$(document).ready(function () {
+                $('.js-example-basic-multiple').select2({
+                    tags: true,
+                });
+            });</script>
+            
+            <script src="https://cdn.ckeditor.com/ckeditor5/46.0.1/ckeditor5.umd.js"></script>
+            
+           
+
+</body>
+
+</html>
